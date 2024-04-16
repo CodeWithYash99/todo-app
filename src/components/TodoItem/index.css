@@ -1,5 +1,5 @@
 .todo-item-container {
-    width: 40%;
+    width: 50%;
 }
 .todo-items-heading {
     color: #f05a24;
@@ -34,8 +34,30 @@
     line-height: 40px;
 }
 
+.done {
+    text-decoration: line-through;
+    opacity: 0.4;
+}
+
+.update-todo-item {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    margin-right: 8px;
+    padding-left: 8px;
+    height: 34px;
+    border-radius: 8px;
+    border: 1px solid grey;
+    outline: none;
+}
+
 .icons-container {
-    width: 80px;
+    width: 120px;
+}
+
+.todo-complete-icon {
+    color: #0bae36;
+    font-size: 20px;
+    cursor: pointer;
 }
 
 .todo-edit-icon {

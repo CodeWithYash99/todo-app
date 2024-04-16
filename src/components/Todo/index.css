@@ -37,7 +37,49 @@
     font-family: 'monospace';
     font-size: 18px;
     font-weight: 700;
-    width: 100px;
+    padding: 0 14px;
+    min-width: 100px;
     border-radius: 6px;
     cursor: pointer;
+}
+
+.todo-update-input {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    font-weight: 700;
+    padding-left: 12px;
+    width: 55%;
+    height: 40px;
+    border-radius: 6px;
+    border: 2px solid #66eaf6;
+    outline: none;
+}
+
+.update-todo-btn {
+    background-color: #c8f470;
+    color: #024554;
+    font-family: 'monospace';
+    font-size: 18px;
+    font-weight: 700;
+    min-width: 80px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.cancel-todo-btn {
+    background-color: #ffd901;
+    color: red;
+    font-family: 'monospace';
+    font-size: 18px;
+    font-weight: 700;
+    min-width: 80px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.empty-todos {
+    color: #024554;
+    font-family: 'monospace';
+    font-size: 20px;
+    font-weight: 700;
 }
