@@ -1,0 +1,51 @@
+.todo-item-container {
+    width: 40%;
+}
+.todo-items-heading {
+    color: #f05a24;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.todo-list-items-container {
+    width: 100%;
+    padding: 0;
+    list-style-type: none;
+}
+
+.todo-list-item {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 6px;
+    border: 2px solid grey;
+}
+
+.todo-list-item p {
+    color: #067272;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 40px;
+}
+
+.icons-container {
+    width: 80px;
+}
+
+.todo-edit-icon {
+    color: deepskyblue;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.todo-delete-icon {
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+}
