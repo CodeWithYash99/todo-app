@@ -1,28 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 import { TodoItem } from "../TodoItem";
 
 import "./index.css";
 
-const initialTodoItems = () => {
-  let getLocalItems = localStorage.getItem("todosList");
-
-  if (getLocalItems) {
-    return JSON.parse(localStorage.getItem(getLocalItems));
-  } else {
-    return [];
-  }
-};
-
 export const Todo = () => {
   const [todo, setTodo] = useState("");
   const [todoItems, setTodoItems] = useState([]);
-  const [updateTodo, setUpdateTodo] = useState(initialTodoItems());
-
-  useEffect(() => {
-    localStorage.setItem("todosList", JSON.stringify(todoItems));
-  }, [todoItems]);
+  const [updateTodo, setUpdateTodo] = useState([]);
 
   function addTodoHandler(event) {
     event.preventDefault();
