@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-
 import { TodoItem } from "../TodoItem";
 
 import "./index.css";
@@ -45,7 +44,6 @@ export const Todo = () => {
       title: e.target.value,
       status: updateTodo.status ? true : false,
     };
-
     setUpdateTodo(newEntry);
   }
 
@@ -56,8 +54,12 @@ export const Todo = () => {
     setUpdateTodo("");
   }
 
-  function onClickCancelTodo(e) {
+  function onClickCancelTodo() {
     setUpdateTodo("");
+  }
+
+  function dup(e) {
+    e.preventDefault();
   }
 
   return (
@@ -65,10 +67,7 @@ export const Todo = () => {
       <h1 className="todo-title">Todo Application</h1>
 
       {updateTodo && updateTodo.title ? (
-        <form
-          className="todo-form-container flex flex-row justify-evenly"
-          onSubmit={addTodoHandler}
-        >
+        <form className="todo-form-container flex flex-row justify-evenly">
           <input
             className="todo-update-input"
             type="text"
