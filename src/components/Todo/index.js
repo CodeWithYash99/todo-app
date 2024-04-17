@@ -64,7 +64,7 @@ export const Todo = () => {
     <div className="todo-container flex flex-col items-center">
       <h1 className="todo-title">Todo Application</h1>
 
-      {updateTodo ? (
+      {updateTodo && updateTodo.title ? (
         <form
           className="todo-form-container flex flex-row justify-evenly"
           onSubmit={addTodoHandler}
