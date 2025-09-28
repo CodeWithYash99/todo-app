@@ -2,11 +2,12 @@ import React from "react";
 
 import { BiSolidEdit } from "react-icons/bi";
 import { IoTrashSharp, IoCheckmarkDoneCircle } from "react-icons/io5";
-// import { GrUpdate } from "react-icons/gr";
 
-import "./index.css";
+import "../styles/todoItem.css";
 
-export const TodoItem = ({ todoItems, deleteTodoItem, todoComplete, setUpdateTodo }) => {
+export const TodoItem = (props) => {
+  const { todoItems, todoComplete, setUpdateTodo, deleteTodoItem } = props;
+
   return (
     <div className="todo-item-container flex flex-col justify-center items-center">
       <h3 className="todo-items-heading">Todo Items</h3>
@@ -25,11 +26,18 @@ export const TodoItem = ({ todoItems, deleteTodoItem, todoComplete, setUpdateTod
                 onClick={() => todoComplete(todo.id)}
               />
 
-              {todo.status ? null : <BiSolidEdit className="todo-edit-icon" onClick={() => setUpdateTodo({
-                id: todo.id,
-                title: todo.title,
-                status: todo.status ? true : false
-              })} />}
+              {todo.status ? null : (
+                <BiSolidEdit
+                  className="todo-edit-icon"
+                  onClick={() =>
+                    setUpdateTodo({
+                      id: todo.id,
+                      title: todo.title,
+                      status: todo.status ? true : false,
+                    })
+                  }
+                />
+              )}
 
               <IoTrashSharp
                 className="todo-delete-icon"
